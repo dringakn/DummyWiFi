@@ -106,7 +106,7 @@ To use the Dummy WiFi Module, follow these steps:
 6. Unload the module when done:
 
    ```shell
-   sudo rmmod dummy_wifi_module
+   sudo rmmod dummywifi
 
    ```
 
