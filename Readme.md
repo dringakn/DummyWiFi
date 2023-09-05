@@ -6,7 +6,7 @@ The Dummy WiFi Module is an example Linux kernel module for a Wi-Fi FullMAC driv
 
 ## Module Information
 
-- **Author:** Ahmad Kamal Nasir <dringakn@gmail.com>
+- **Author:** Dr. -Ing. Ahmad Kamal Nasir <dringakn@gmail.com>
 - **Version:** 1.0
 - **License:** GPL v2
 
@@ -147,7 +147,7 @@ To use the Dummy WiFi Module, follow these steps:
 
    ```shell
    iw dev dummy0 link
-   iw dev dummy0 connect MyAwesomeWiFi
+   iw dev dummy0 connect MyAwesomeWiFi [2437]
 
    ```
 
@@ -164,6 +164,17 @@ To use the Dummy WiFi Module, follow these steps:
             Mode:Managed  Frequency:2.437 GHz  Access Point: AA:BB:CC:DD:EE:FF
             Retry short limit:7   RTS thr:off   Fragment thr:off
             Power Management:on
+   ```
+
+   _Note_ Since only one channel (6, 2.437GHz) is implemented, therefore connection will not be established if diffrent frequency is specified.
+   Error might states `command failed: Invalid argument (-22)`. If there is already a conneciton the error might states `command failed: Operation already in progress (-114)`
+   The frequency or channel information can be obtained as follows `iwlist dummy0 freq`, here is the sample output:
+
+   ```
+   dummy0   1 channels in total; available frequencies :
+            Channel 06 : 2.437 GHz
+            Current Frequency:2.437 GHz (Channel 6)
+
    ```
 
 5. To disconnect from the network:
