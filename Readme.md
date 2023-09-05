@@ -88,6 +88,39 @@ To use the Dummy WiFi Module, follow these steps:
    iw dev dummy0 scan
 
    ```
+   Sample dummy info:
+   ```
+   Wiphy dummy
+	max # scan SSIDs: 69
+	max scan IEs length: 0 bytes
+	max # sched scan SSIDs: 0
+	max # match sets: 0
+	Retry short limit: 7
+	Retry long limit: 4
+	Coverage class: 0 (up to 0m)
+	Available Antennas: TX 0 RX 0
+	Supported interface modes:
+		 * managed
+	Band 1:
+		Bitrates (non-HT):
+			* 1.0 Mbps
+			* 2.0 Mbps
+			* 5.5 Mbps
+			* 11.0 Mbps
+		Frequencies:
+			* 2437 MHz [6] (20.0 dBm)
+	Supported commands:
+		 * connect
+		 * disconnect
+	software interface modes (can always be added):
+	interface combinations are not supported
+	Device supports scan flush.
+	max # scan plans: 1
+	max scan plan interval: -1
+	max scan plan iterations: 0
+	Supported extended features:
+
+   ```
 
 4. To connect to the dummy network:
 
