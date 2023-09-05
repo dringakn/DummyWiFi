@@ -122,5 +122,3 @@ This module is a simplified example for educational purposes and does not provid
 # License
 
 This module is released under the GPL v2 license. See the LICENSE file for details.
-
-You can copy and paste this Markdown content into a `Readme.md` file for your Dummy WiFi driver. Make sure to adjust the module name and other details as needed for your specific driver.
