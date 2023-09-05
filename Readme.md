@@ -118,7 +118,8 @@ To use the Dummy WiFi Module, follow these steps:
 # Disclaimer
 
 This module is a simplified example for educational purposes and does not provide real Wi-Fi functionality. It serves as a starting point for developing FullMAC Wi-Fi drivers for the Linux kernel.
-License
+
+# License
 
 This module is released under the GPL v2 license. See the LICENSE file for details.
 
