@@ -81,6 +81,13 @@ To use the Dummy WiFi Module, follow these steps:
 
    ```
 
+   Sample output:
+
+   ```
+   dummywifi              16384  0
+   cfg80211              970752  5 iwlmvm,mt7601u,iwlwifi,mac80211,dummywifi
+   ```
+
 3. To get wifi info and to perform a scan:
 
    ```shell
@@ -89,7 +96,7 @@ To use the Dummy WiFi Module, follow these steps:
 
    ```
 
-   Sample dummy info output:
+   Sample dummy info output using `iw dummy info`:
 
    ```
    Wiphy dummy
@@ -124,7 +131,7 @@ To use the Dummy WiFi Module, follow these steps:
 
    ```
 
-   Sample scan output:
+   Sample scan output using `iw dev dummy0 scan`:
 
    ```
    BSS aa:bb:cc:dd:ee:ff(on dummy0)
@@ -139,14 +146,40 @@ To use the Dummy WiFi Module, follow these steps:
 4. To connect to the dummy network:
 
    ```shell
+   iw dev dummy0 link
    iw dev dummy0 connect MyAwesomeWiFi
 
+   ```
+
+   The sample output of the dummy device before connection using `iw dev dummy0 link`:
+
+   ```
+   Not connected.
+   ```
+
+   The sample output of the `iwconfig dummy0` after connection:
+
+   ```
+   dummy0   IEEE 802.11  ESSID:"MyAwesomeWiFi"
+            Mode:Managed  Frequency:2.437 GHz  Access Point: AA:BB:CC:DD:EE:FF
+            Retry short limit:7   RTS thr:off   Fragment thr:off
+            Power Management:on
    ```
 
 5. To disconnect from the network:
 
    ```shell
    iw dev dummy0 disconnect
+
+   ```
+
+   The sample output of the `iwconfig dummy0` after disconnection:
+
+   ```
+   dummy0   IEEE 802.11  ESSID:off/any
+            Mode:Managed  Access Point: Not-Associated
+            Retry short limit:7   RTS thr:off   Fragment thr:off
+            Power Management:on
 
    ```
 
